@@ -40,5 +40,5 @@ function playRPS() {
   console.log(`Winner: ${winner}`);
 }
 
-// Play the game twice
+// Play the game twice (once per player)
 playRPS();
