@@ -14,30 +14,24 @@ function playRPS() {
     player1Choice = "Scissors";
   }
 
-  if (Math.abs(player2 - 1) < Math.abs(player2 - 2) && Math.abs(player2 - 1) < Math.abs(player2 - 3)) {
-    player2Choice = "Rock";
-  } else if (Math.abs(player2 - 2) < Math.abs(player2 - 1) && Math.abs(player2 - 2) < Math.abs(player2 - 3)) {
-    player2Choice = "Paper";
-  } else {
-    player2Choice = "Scissors";
-  }
+  player2Choice = prompt("Rock, Paper, or Scissors?")
 
   // Determine the winner based on game logic
   let winner;
   if (player1Choice === player2Choice) {
     winner = "Tie";
   } else if (player1Choice === "Rock") {
-    winner = player2Choice === "Scissors" ? "Player 1" : "Player 2";
+    winner = player2Choice === "Scissors" ? "Bot" : "Player";
   } else if (player1Choice === "Paper") {
-    winner = player2Choice === "Rock" ? "Player 1" : "Player 2";
+    winner = player2Choice === "Rock" ? "Bot" : "Player";
   } else { // player1Choice === "Scissors"
-    winner = player2Choice === "Paper" ? "Player 1" : "Player 2";
+    winner = player2Choice === "Paper" ? "Bot" : "Player";
   }
 
   // Print the results
-  console.log(`Player 1: ${player1Choice}`);
-  console.log(`Player 2: ${player2Choice}`);
-  console.log(`Winner: ${winner}`);
+  alert(`Bot: ${player1Choice}
+  Player: ${player2Choice}
+  Winner: ${winner}`);
 }
 
 // Play the game twice (once per player)
